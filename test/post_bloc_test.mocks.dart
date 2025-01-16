@@ -34,8 +34,7 @@ class MockPostRepository extends _i1.Mock implements _i2.PostRepository {
   @override
   _i3.Future<List<_i4.Post>> fetchPosts(int? start, int? limit) =>
       (super.noSuchMethod(
-            Invocation.method(#fetchPosts, [start, limit]),
-            returnValue: _i3.Future<List<_i4.Post>>.value(<_i4.Post>[]),
-          )
-          as _i3.Future<List<_i4.Post>>);
+        Invocation.method(#fetchPosts, [start, limit]),
+        returnValue: _i3.Future<List<_i4.Post>>.value(<_i4.Post>[]),
+      ) as _i3.Future<List<_i4.Post>>);
 }
