@@ -127,8 +127,11 @@ class _PostListScreenState extends State<PostListScreen> {
         },
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.blue,
         onPressed: _showFilterMenu,
-        child: const Icon(Icons.filter_list),
+        child: const Icon(Icons.filter_list,
+        color: Colors.white,
+        ),
       ),
     );
   }
