@@ -103,9 +103,6 @@ class _PostListScreenState extends State<PostListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Posts'),
-      ),
       body: BlocBuilder<PostBloc, PostState>(
         builder: (context, state) {
           if (state is PostLoading && _start == 0) {
@@ -115,7 +112,12 @@ class _PostListScreenState extends State<PostListScreen> {
               controller: _scrollController,
               itemCount: state.posts.length,
               itemBuilder: (context, index) {
-                return PostCard(post: state.posts[index]);
+                return Column(
+                  children: [
+                    SizedBox(height: 20),
+                    PostCard(post: state.posts[index]),
+                  ],
+                );
               },
             );
           } else if (state is PostError) {
